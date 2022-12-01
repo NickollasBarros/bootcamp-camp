@@ -1,7 +1,19 @@
-body {
-    margin: 0%; <!--Margem externa-->
-    padding: 0%; <!--Margem interna-->
+:root {
+    --azul-dnc: #070CF2;
+    --preto-dnc: #303030;
+    --branco-padrao: #ffffff;
+    --cinza-hover: #c9c9c9;
+    --fonte-padrao: 'Inter';
 }
+
+body {
+    margin: 0%;
+    padding: 0%;
+
+    background: linear-gradient(180deg, rgba(12, 112, 224, 0.5) 19.91%, rgba(12,112,224, 0) 24.84%), #303030;
+    background-repeat: no-repeat;
+}
+
 #principal{
     width: 100%;
     height: 100px;
@@ -44,4 +56,91 @@ body {
     width: 45%;
     justify-content: space-around;
     margin-left: 5%;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+header {
+    color: white;
+    font-family: var(--fonte-padrao);
+    text-align: center;
+}
+
+header h1 {
+    text-transform: uppercase;
+    font-size: 80px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+header h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 100px;
+}
+
+header .invert {
+    background-color: black;
+    font-size: bold;
+    padding: 5px;
+}
+
+form {
+    color: white;
+    font-family: var(--fonte-padrao);
+    font-size: 30px;
+    font-weight: 600;
+    width: 600px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+form input {
+    border: 0px;
+    border-radius: 10px;
+    height: 30px;
+    font-size: 20px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+form input::placeholder {
+    color: rgba(57, 57, 57, 0.5)
+}
+
+form label{
+    margin: 10px 0px 10px 0px
+}
+
+.checkbox-itens {
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+    align-items: center;
+}
+
+input[type="checkbox"] {
+    transform: scale(1.7);
+}
+
+input[type="submit"] {
+    background-color: rgba(12, 112, 424, 0.9);
+    font-size: 32px;
+    width: 100%;
+    height: 56px;
+    color: white;
+    margin-top: 100px;
+    box-shadow: 0px 6px 4px rgba(12, 112, 242, 0.25);
+    cursor: pointer;
 }
